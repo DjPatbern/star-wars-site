@@ -1,0 +1,9 @@
+.bg-gradient-to-custom-services {
+    background: linear-gradient(
+        180deg,
+        #040309 0%,
+        /* #FFFFFF 100%, */
+        #4B3B86 100%
+    );
+  }
+ 
