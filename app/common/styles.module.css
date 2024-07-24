@@ -1,27 +1,8 @@
 .bg-gradient-to-custom {
-    background: linear-gradient(
-        180deg,
-        #FFFFFF 0%,
-        /* #FFFFFF 100%, */
-        #EDEAFC 100%
-    );
-  }
+  background: linear-gradient(180deg, #ffffff 0%, #edeafc 100%);
+}
 
-  .bg-gradient-to-custom-services {
-    background: linear-gradient(
-        180deg,
-        #040309 0%,
-        /* #FFFFFF 100%, */
-        #4B3B86 100%
-    );
-  }
+.bg-gradient-to-custom-services {
+  background: linear-gradient(180deg, #040309 0%, #4b3b86 100%);
+}
 
-  .bg-gradient-to-modal {
-    background: linear-gradient(
-        180deg,
-        #AD9FF1 0%,
-        /* #7A60D8 50%, */
-        #EDEAFC 100%
-    );
-  }
- 

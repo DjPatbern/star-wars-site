@@ -1,7 +1,6 @@
 'use client';
 import React, { ReactNode, createContext } from 'react';
 import { cn } from '@/lib/utils';
-// import { usePreventBodyScroll } from '@/src/hooks/usePreventBodyScroll';
 
 export const DrawerContext = createContext({} as { onClose?: () => void });
 
@@ -16,7 +15,6 @@ export const Drawer = ({
   onClose?(): void;
   className?: string;
 }) => {
-  // usePreventBodyScroll(isOpen);
 
   const overlayClickHandler = (e: any) => {
     if (e.target === e.currentTarget) {

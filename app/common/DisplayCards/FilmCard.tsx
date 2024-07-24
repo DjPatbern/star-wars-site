@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { garamond } from "@/src/utils/font";
@@ -6,16 +5,14 @@ import { excerpt } from "@/lib/utils";
 import { formatDate } from "@/src/utils/formatTime";
 import filmPlaceholderImg from "@/public/images/filmplaceholder.webp";
 
-
 type Props = {
   film: any;
 };
 
 export const FilmCard = ({ film }: Props) => {
-
   return (
     <Link href={`/films/?id=${film?.episode_id}`}>
-      <div className="flex-col items-center justify-center flex py-1.5 px-1.5 rounded-xl gap-4 hover:border-[#F9F871] h-80 border-4 border-dotted border-ts-faded-purple md:mb-8">
+      <div className="flex-col items-center mb-10 justify-center flex py-1.5 px-1.5 rounded-xl gap-4 hover:border-[#F9F871] md:h-80 border-4 border-dotted border-ts-faded-purple md:mb-8">
         <div>
           <Image
             src={filmPlaceholderImg}
@@ -39,11 +36,11 @@ export const FilmCard = ({ film }: Props) => {
           </p>
         </div>
         <div>
-        <p className="font-extralight text-center text-[10px] uppercase leading-3 text-[#F9F871]">
-           Episode:  {film?.episode_id}
+          <p className="font-extralight text-center text-[10px] uppercase leading-3 text-[#F9F871]">
+            Episode: {film?.episode_id}
           </p>
-          <p className="font-extralight text-[10px] uppercase leading-3 text-[#969696]">
-            {formatDate(film?.release_date)}
+          <p className="font-extralight text-[10px] uppercase leading-3 text-[#969696] mt-0.5">
+            Released On: {formatDate(film?.release_date)}
           </p>
         </div>
       </div>

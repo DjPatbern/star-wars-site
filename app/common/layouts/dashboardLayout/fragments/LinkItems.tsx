@@ -15,9 +15,7 @@ const LinkItems = () => {
           key={index}
           className={cn(
             "py-1.5",
-            matchPath(link.href) && "border-[#F9F871] border-b-2",
-            link.href === "/blog" && "border-[#F9F871]",
-            link.href === "/services" && "border-[#F9F871]"
+            matchPath(link.href) && "border-[#F9F871] border-b-2"
           )}
         >
           <Link

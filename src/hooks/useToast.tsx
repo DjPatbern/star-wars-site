@@ -1,19 +1,19 @@
-'use client';
-import React from 'react';
-import hotToast from 'react-hot-toast';
-import closeIcon from '@/public/svg/closeToast.svg';
-import failureIcon from '@/public/svg/exclamation.svg';
-import successIcon from '@/public/svg/checkmark.svg';
-import Image from 'next/image';
+"use client";
+import React from "react";
+import hotToast from "react-hot-toast";
+import closeIcon from "@/public/svg/closeToast.svg";
+import failureIcon from "@/public/svg/exclamation.svg";
+import successIcon from "@/public/svg/checkmark.svg";
+import Image from "next/image";
 
-export type ToastType = 'success' | 'failure';
+export type ToastType = "success" | "failure";
 
 export const useToast = () => {
   const toast = (message: string, type: ToastType) =>
     hotToast.custom((t) => (
       <div
         className={`${
-          t.visible ? 'animate-enter' : 'animate-leave'
+          t.visible ? "animate-enter" : "animate-leave"
         } max-w-xs w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}
       >
         <div className="flex-1 w-0 p-4">
@@ -21,7 +21,7 @@ export const useToast = () => {
             <div className="flex-shrink-0">
               <Image
                 priority
-                src={type === 'success' ? successIcon : failureIcon}
+                src={type === "success" ? successIcon : failureIcon}
                 alt="toast icon"
                 width={20}
                 height={20}

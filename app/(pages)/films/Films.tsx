@@ -1,12 +1,13 @@
 "use client";
 import Container from "@/app/common/Container";
 import { FilmCard } from "@/app/common/DisplayCards";
-import FilmDetails from "@/app/(private)/films/FilmDetails";
+import FilmDetails from "@/app/(pages)/films/FilmDetails";
 import { Drawer, DrawerHeader } from "@/app/common/Drawer";
 import { Spinner } from "@/app/common/Spinner";
 import { useFilms } from "@/src/hooks/data/films";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useAuth } from "@/src/user.context";
 
 const Films = () => {
   const [search, setSearch] = useState<string>("");
@@ -21,10 +22,17 @@ const Films = () => {
   );
 
   const filmsToDisplay = search === "" ? films : searchedFilms;
+  const { isAuthenticated, loading } = useAuth();
+
+  useEffect(() => {
+    if (!loading && !isAuthenticated) {
+      push("/login"); // Redirect to login if not authenticated
+    }
+  }, [isAuthenticated, loading, push]);
 
   return (
     <Container>
-      <div className="text-ts-white my-5">
+      <div className="text-ts-white my-5 min-h-[100vh]">
         <div className="flex justify-center items-center mb-10">
           <input
             type="text"
@@ -37,7 +45,7 @@ const Films = () => {
         {isLoading ? (
           <Spinner className="w-12 h-12 m-auto my-10" />
         ) : (
-          <div className="md:grid md:grid-cols-4 gap-8">
+          <div className="md:grid lg:grid-cols-4 md:grid-cols-3 gap-8 ">
             {filmsToDisplay.map((film: any, index: number) => (
               <div key={index}>
                 <FilmCard film={film} />

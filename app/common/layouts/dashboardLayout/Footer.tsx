@@ -12,8 +12,9 @@ const Footer = () => {
     <footer
       className={`${color} w-full md:pt-16 pb-5`}
     >
+      <hr />
       <Container>
-        <div className="md:flex justify-between w-full leading-4">
+        <div className="md:flex justify-between w-full leading-4 mt-10">
           <div className="pb-8 md:block flex justify-center">
             <div className="text-[#F9F871] border-2 border-dotted border-[#F9F871] inline-block px-4 py-2 rounded-xl">
               <Link href="/">DEMOVIEZ</Link>
@@ -66,7 +67,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-xs leading-4 md:text-left text-center md:mt-0 mt-5">
-          © 2024 The Park Database. All rights reserved
+          © 2024 Demoviez. All rights reserved
         </div>
       </Container>
     </footer>
