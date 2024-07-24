@@ -1,31 +1,18 @@
 import React, { useState } from "react";
-import notificationIcon from "@/public/svg/notificationIcon.svg";
-import hamburgerIcon from "@/public/svg/hamburgerIcon.svg";
 import hamburgerIconDark from "@/public/svg/icon_hamburgerDark.svg";
-import cancel from "@/public/svg/cancelWhite.svg";
+import cancel from "@/public/svg/close.svg";
 import Image from "next/image";
 import { Drawer } from "@/app/common/Drawer";
 import Link from "next/link";
 import Profile from "./Profile";
-import { useRouter } from "next/navigation";
 import { links } from "@/src/data";
 
 const PhoneHamburger = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter()
   return (
     <>
       <div>
         <div className="flex gap-5 w-full mr-4">
-         
-         
-            <Image
-              priority
-              src={notificationIcon}
-              className="cursor-pointer"
-              alt="icon"
-            />
-          
           <Image
             priority
             src={hamburgerIconDark}
@@ -50,21 +37,24 @@ const PhoneHamburger = () => {
             <div className="w-full my-5">
               {links.map((link, index) => (
                 <div className="w-full my-1" key={index}>
-                  <div className="w-full text-[#CAFEF6] cursor-pointer  hover:text-[#008A74] hover:bg-[#CAFEF6] py-2 px-4 rounded font-medium text-lg">
-                    <Link href={link.href} className="w-full" onClick={() => setIsOpen(!isOpen)}>
+                  <div className="w-full text-[#F9F871] cursor-pointer bg-ts-purple  hover:text-ts-light-white hover:bg-ts-faded-purple py-2 px-4 rounded font-medium text-lg">
+                    <Link
+                      href={link.href}
+                      className="w-full"
+                      onClick={() => setIsOpen(!isOpen)}
+                    >
                       <p className="w-full">{link.name}</p>
                     </Link>
                   </div>
                 </div>
               ))}
               <div className="block md:hidden">
-              <Profile />
-            </div>
+                <Profile />
+              </div>
             </div>
           </div>
         </Drawer>
       </div>
-
     </>
   );
 };

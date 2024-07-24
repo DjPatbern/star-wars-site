@@ -9,3 +9,11 @@ export const useFilms = (enable?: boolean) => {
     enabled: enable,
   });
 };
+
+export const useFilm = (enable?: boolean, id?: string) => {
+  return useQuery({
+    queryKey: [QUERY_PATHS.FILMS],
+    queryFn: () => filmsService.getFilm(id),
+    enabled: enable,
+  });
+};

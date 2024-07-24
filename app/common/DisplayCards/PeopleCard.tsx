@@ -11,7 +11,7 @@ type Props = {
   film: any;
 };
 
-export const FilmCard = ({ film }: Props) => {
+export const PeopleCard = ({ film }: Props) => {
 
   return (
     <Link href={`/films/?id=${film?.episode_id}`}>

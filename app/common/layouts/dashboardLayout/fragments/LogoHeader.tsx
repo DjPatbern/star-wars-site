@@ -1,23 +1,10 @@
-import Image from 'next/image';
-import Link from 'next/link';
-// import logoFull from '@/public/svg/logoFull.svg';
-// import logoSmall from '@/public/svg/logoSmall.svg';
-// import logoDark from '@/public/svg/logoDarkBg.svg';
-
+import Link from "next/link";
 
 const LogoHeader = () => {
-  // const logoIcon = darkBg ? logoDark : logoFull
   return (
-    <Link href="/">
-      {/* <Image src={logoSmall} alt="The Park DB" className="md:hidden" priority /> */}
-      Logo Big
-      {/* <Image
-        src={logoIcon}
-        alt="The Park DB"
-        className="hidden md:block max-w-[160px]"
-        priority
-      /> */}
-    </Link>
+    <div className="text-[#F9F871] border-2 border-dotted border-[#F9F871] inline-block px-4 py-2 rounded-xl">
+      <Link href="/">DEMOVIEZ</Link>
+    </div>
   );
 };
 

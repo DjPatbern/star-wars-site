@@ -39,12 +39,14 @@ const Home = () => {
                 Movies here on our website.
               </h1>
 
-              <div className="flex text-[#F9F871]">
-                <Link href="/" className="flex gap-2">
-                  <p className="text-sm leading-5">Login</p>{" "}
-                  {/* <Image src={arrowRight} className="mt-1" alt="arrow" /> */}
-                </Link>
-              </div>
+              <div className="flex gap-10 mt-4 items-center justify-center md:justify-start">
+              <button className=" text-center  zoom-animation bg-[#F9F871] hover:bg-ts-faded-purple text-ts-black-primary font-bold py-2 px-4 rounded-2xl">
+                Sign In
+              </button>
+              <button className=" text-center  zoom-animation bg-ts-faded-purple hover:bg-ts-black-300 text-white font-bold py-2 px-4 rounded-2xl">
+                Get Started
+              </button>
+            </div>
             </div>
           </div>
         </div>

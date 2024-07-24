@@ -39,7 +39,7 @@ export const Drawer = ({
       >
         <div
           className={cn(
-            'fixed top-0 right-0 z-40 h-screen px-4 pb-4 overflow-y-auto transition-transform duration-300 bg-[#008A74] w-full max-w-md',
+            'fixed top-0 right-0 z-40 h-screen px-4 pb-4 overflow-y-auto transition-transform duration-300 bg-ts-white w-full max-w-md',
             !isOpen && 'translate-x-full'
           )}
         >

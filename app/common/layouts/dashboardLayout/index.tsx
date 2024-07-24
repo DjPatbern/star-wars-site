@@ -5,7 +5,7 @@ import Footer from "./Footer";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode}) => {
   return (
-    <div className="relative">
+    <div className="relative flex flex-col justify-between h-[100%] ">
       <Header />
       <main>{children}</main>
       <Footer />

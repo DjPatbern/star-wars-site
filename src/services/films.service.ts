@@ -10,6 +10,11 @@ class FilmsService extends HttpService {
     const { data } = await this.http.get(QUERY_PATHS.FILMS);
     return data;
   }
+
+  public async getFilm(id?: string) {
+    const { data } = await this.http.get(`${QUERY_PATHS.FILMS}/${id}`);
+    return data;
+  }
 }
 
 export const filmsService = new FilmsService();

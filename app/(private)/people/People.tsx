@@ -1,14 +1,14 @@
 "use client";
 import Container from "@/app/common/Container";
-import { FilmCard } from "@/app/common/DisplayCards";
-import FilmDetails from "@/app/(private)/films/FilmDetails";
+import { PeopleCard } from "@/app/common/DisplayCards";
 import { Drawer, DrawerHeader } from "@/app/common/Drawer";
 import { Spinner } from "@/app/common/Spinner";
 import { useFilms } from "@/src/hooks/data/films";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
+import PeopleDetails from "./PeopleDetails";
 
-const Films = () => {
+const People = () => {
   const [search, setSearch] = useState<string>("");
   const { data: allFilms, isLoading } = useFilms(true);
   const searchParams = useSearchParams();
@@ -40,18 +40,18 @@ const Films = () => {
           <div className="md:grid md:grid-cols-4 gap-8">
             {filmsToDisplay.map((film: any, index: number) => (
               <div key={index}>
-                <FilmCard film={film} />
+                <PeopleCard film={film} />
               </div>
             ))}
           </div>
         )}
         <Drawer isOpen={!!id} onClose={() => push(`/films`)}>
           <DrawerHeader title="Film Details" />
-          <FilmDetails films={films} />
+          <PeopleDetails films={films} />
         </Drawer>
       </div>
     </Container>
   );
 };
 
-export default Films;
+export default People;
