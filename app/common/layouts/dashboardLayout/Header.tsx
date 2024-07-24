@@ -7,7 +7,7 @@ import Profile from "./fragments/Profile";
 const Header = () => {
   return (
     <header
-      className={` shadow-sm z-50 py-6`}
+      className={`bg-[#040309] sticky top-0 shadow-sm z-50 py-6`}
     >
       <Container>
         <nav className="flex items-center justify-between">

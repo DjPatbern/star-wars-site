@@ -11,6 +11,7 @@ import Image from "next/image";
 import Container from "@/app/common/Container";
 
 const Home = () => {
+
   return (
     <DashboardLayout>
       <>

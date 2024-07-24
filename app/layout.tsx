@@ -6,7 +6,7 @@ import { NextTopLoader } from "./common/NextTopLoader";
 import { cn } from "@/lib/utils";
 import styles from "@/styles.module.css";
 import { geologica } from "@/src/utils/font";
-
+import { ReactQueryProvider } from "./ReactQueryProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,10 +20,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${cn(styles["bg-gradient-to-custom-services"])} ${cn(geologica.className, "font-sans")}`}>
-        <Toaster position="top-right" />
-        <NextTopLoader />
-        {children}
+      <body
+        suppressHydrationWarning={true}
+        className={`${cn(styles["bg-gradient-to-custom-services"])} ${cn(
+          geologica.className,
+          "font-sans"
+        )}`}
+      >
+        <ReactQueryProvider>
+          <Toaster position="top-right" />
+          <NextTopLoader />
+          {children}
+        </ReactQueryProvider>
       </body>
     </html>
   );
