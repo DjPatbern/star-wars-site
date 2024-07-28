@@ -1,11 +1,8 @@
 # Star Wars Website
 
-## Setup Instructions
-
-1. Clone the repository:
-   ```bash
-   i. git clone https://github.com/DjPatbern/star-wars-site.git
-   ii. cd star-wars-site
-   iii. run "npm install" to install all needed packages.
-   iv. run "npm run dev" to start the nextjs app
+## Star wars is demo movie app that demostrates the best use of React Query.
+## It uses NextJs, Tailwind Css and TypeScript.
+## It fetches movies, Casts and Planets from an API.
+## This development support perfect responsitivty and best architechtural design.
+## This application uses a google account format authentication using Google Firebase.
 
